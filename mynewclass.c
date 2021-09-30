@@ -10,5 +10,12 @@ t_mynewclass mynewclass_create (int *exception) {
         *exception = errno;
         return NULL;
     }
+
     new_object -> buffer = malloc(bsize_buff*sizeof (t_buffer));
+    if (new_object -> buffer == NULL) {
+        free(object);
+        *exception = errno;
+        return NULL;
+    }
+
 }
