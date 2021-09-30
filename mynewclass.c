@@ -18,4 +18,5 @@ t_mynewclass mynewclass_create (int *exception) {
         return NULL;
     }
 
+    new_object -> value_1 = 0;
 }
