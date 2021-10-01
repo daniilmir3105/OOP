@@ -7,6 +7,8 @@
 
 // here we import our class
 #include "myclass.h"
+#include "class1.h"
+#include "class2.h"
 
 // define class with fields
 struct myclass {
@@ -20,7 +22,12 @@ struct myclass {
     // some code...
 
     // Eventhandlers for doughterclass objects
-    void class1_handler_event (t_class1* class_object) {
-
+    void class1_handler_event (t_class1* class1_object) {
+        t_myclass* parent = (t_myclass*) class1_get_parent (class1_object);
     }
+
+    void class2_handler_event (t_class2* class2_object) {
+        t_myclass* parent = (t_myclass*) class2_get_parent (class2_object);
+    }
+
 };
