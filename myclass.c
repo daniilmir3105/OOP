@@ -30,4 +30,21 @@ struct myclass {
         t_myclass* parent = (t_myclass*) class2_get_parent (class2_object);
     }
 
+    // constructor
+     {
+         int error;
+
+         t_myclass* new_object = malloc(sizeof(t_myclass))
+
+         if (new_object == NULL) {
+             *exception = errno;
+             return NULL;
+         }
+
+        // initialisation of variablles
+
+    }
+
+    // initialisation of variablles
+
 };
