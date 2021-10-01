@@ -19,5 +19,8 @@ struct myclass {
     // doughters classes
     // some code...
 
+    // Eventhandlers for doughterclass objects
+    void class1_handler_event (t_class1* class_object) {
 
+    }
 };
