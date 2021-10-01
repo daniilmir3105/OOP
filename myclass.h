@@ -5,7 +5,7 @@
 #ifndef OOP_MYCLASS_H
 #define OOP_MYCLASS_H
 
-#include "sfuns.h"
+//#include "sfuns.h"
 #include <stdlib.h>
 
 // define class

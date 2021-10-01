@@ -4,19 +4,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-t_mynewclass mynewclass_create (int *exception) {
-    t_mynewclass* new_object = malloc (sizeof (t_mynewclass));
-    if (new_object == NULL) {
-        *exception = errno;
-        return NULL;
-    }
-
-    new_object -> buffer = malloc(bsize_buff*sizeof (t_buffer));
-    if (new_object -> buffer == NULL) {
-        free(object);
-        *exception = errno;
-        return NULL;
-    }
-
-    new_object -> value_1 = 0;
-}
+//t_mynewclass mynewclass_create (int *exception) {
+//    t_mynewclass* new_object = malloc (sizeof (t_mynewclass));
+//    if (new_object == NULL) {
+//        *exception = errno;
+//        return NULL;
+//    }
+//
+//    new_object -> buffer = malloc(bsize_buff*sizeof (t_buffer));
+//    if (new_object -> buffer == NULL) {
+//        free(object);
+//        *exception = errno;
+//        return NULL;
+//    }
+//
+//    new_object -> value_1 = 0;
+//}
