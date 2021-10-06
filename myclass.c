@@ -41,7 +41,7 @@ struct myclass {
              *exception = errno;
              return NULL;
          }
-
+         // initialisation of variablles
          new_object->value = "something";
 
          // initialisation if doughters-objects
@@ -69,12 +69,16 @@ struct myclass {
 
          return new_object
 
-         // initialisation of variablles
-
     }
 
     void myclass_destroy (t_myclass* object) {
         class1_destroy(object->object1);
         class2_destroy(object->object2);
+
+        free(object->object1);
+        free(object->object1);
+        object = NULL;
     }
+
+
 };
