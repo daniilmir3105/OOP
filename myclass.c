@@ -75,6 +75,8 @@ struct myclass {
         class1_destroy(object->object1);
         class2_destroy(object->object2);
 
+        // something
+
         free(object->object1);
         free(object->object1);
         object = NULL;
