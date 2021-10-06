@@ -96,6 +96,11 @@ struct myclass {
     }
 
     void myclass_set_value(t_myclass* object, void* parent) {
+        object->value = value;
+    }
 
+    void myclass_get_value(t_myclass* object) {
+//        object->parent = parent;
+        return object->value;
     }
 };
