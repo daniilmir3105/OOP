@@ -63,10 +63,18 @@ struct myclass {
          class1_set_parent(new_object->object1, (void*)new_object);
          class2_set_parent(new_object->object2, (void*)new_object);
 
+         // describe functions-describers
+         new_object->listener_1->on_event = class1_handler_event;
+         new_object->listener_2->on_event = class2_handler_event;
+
+         return new_object
+
          // initialisation of variablles
 
     }
 
-    // initialisation of variablles
-
+    void myclass_destroy (t_myclass* object) {
+        class1_destroy(object->object1);
+        class2_destroy(object->object2);
+    }
 };
