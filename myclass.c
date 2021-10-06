@@ -82,5 +82,20 @@ struct myclass {
         object = NULL;
     }
 
+    void myclass_set_listener(t_myclass* object, t_myclass_events* listener) {
+        object->listener = listener;
+    }
 
+    void myclass_set_parent(t_myclass* object, void* parent) {
+        object->parent = parent;
+    }
+
+    void myclass_get_parent(t_myclass* object) {
+//        object->parent = parent;
+        return object->parent;
+    }
+
+    void myclass_set_value(t_myclass* object, void* parent) {
+
+    }
 };
