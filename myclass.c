@@ -31,6 +31,7 @@ struct myclass {
     }
 
     // constructor
+    t_myclass* myclass_create (int* exception)
      {
          int error;
 
@@ -41,7 +42,28 @@ struct myclass {
              return NULL;
          }
 
-        // initialisation of variablles
+         new_object->value = "something";
+
+         // initialisation if doughters-objects
+         new_object->object1 = class1_create(&error);
+         if (new_object->object1 == NULL) {
+             *exeption = error;
+             free(new_object);
+             return NULL;
+         }
+
+         new_object->object2 = class2_create(&error);
+         if (new_object->object2 == NULL) {
+             *exeption = error;
+             free(new_object);
+             return NULL;
+         }
+
+         // in construct describe the parent
+         class1_set_parent(new_object->object1, (void*)new_object);
+         class2_set_parent(new_object->object2, (void*)new_object);
+
+         // initialisation of variablles
 
     }
 
